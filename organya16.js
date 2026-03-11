@@ -38,7 +38,7 @@
             }
 
             this.tracks = [];
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 32; i++) {
                 const track = [];
                 track.length = this.instruments[i].notes;
 
@@ -114,7 +114,7 @@
             this.samplesPerTick = 0;
             this.samplesThisTick = 0;
             this.state = [];
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 32; i++) {
                 this.state[i] = {
                     t: 0,
                     key: 0,
