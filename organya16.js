@@ -28,7 +28,7 @@
 
             this.instruments = [];
 
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 32; i++) {
                 const freq = view.getInt16(p, true); p += 2;
                 const wave = view.getUint8(p, true); p++;
                 const pipi = view.getUint8(p, true); p++;
@@ -61,32 +61,6 @@
                     track[j].vol = view.getUint8(p, true); p++;
                 }
 
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-
-                //New Tracks
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
-                 for (let j = 0; j < this.instruments[i].notes; j++) {
-                    track[j].pan = view.getUint8(p, true); p++;
-                }
                 for (let j = 0; j < this.instruments[i].notes; j++) {
                     track[j].pan = view.getUint8(p, true); p++;
                 }
