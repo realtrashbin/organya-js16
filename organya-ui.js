@@ -79,7 +79,7 @@
             }
 
             for (let i = 0; i < str.length; i++) {
-                this.ctx.drawImage(this.number, (str.charCodeAt(i) - 0x30) * 8, white ? 12 : 0, 8, 12, x + 8 * i, y, 8, 12);
+                this.ctx.drawImage(this.number, (str.charCodeAt(i) - 0x30) * 8 + 112, white ? 12 : 0, 8, 12, x + 8 * i, y, 8, 12);
             }
         }
 
@@ -162,7 +162,7 @@
                     let noteIdx = Math.max(0, trackRef.findIndex((n) => n.pos >= viewPos) - 1);
                     if (noteIdx === -1) continue;
 
-                    const sprHeadX = (track & 1) * 16;
+                    const sprHeadX = (track & 1) * 16 + 112;
                     const sprHeadY = 48 + (track / 2 | 0) * 8;
 
                     let x = 64;
