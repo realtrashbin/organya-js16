@@ -20,7 +20,7 @@
             if (orgVersion != 0x3230) {
                 throw "Invalid version.";
             }
-            else if (orgVersion != 0x3136) {
+            else if (orgVersion != 0x3631) {
                 throw "Invalid version(16).";
             }
 
