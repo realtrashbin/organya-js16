@@ -20,6 +20,9 @@
             if (orgVersion != 0x3230) {
                 throw "Invalid version.";
             }
+            else if (orgVersion != 0x3631) {
+                throw "Invalid version.";
+            }
 
             this.wait = view.getUint16(p, true); p += 2;
             this.meas = [view.getUint8(p++, true), view.getUint8(p++, true)];
