@@ -8,7 +8,7 @@ A tiny and accurate player for Organya and Organya16 music files.
 
 **Organya16** is an extension of Organya that adds 16 more tracks and was created by me: Bi_N. Made because I thought 8 tracks were too limiting.
 
-See the demo: https://RealTrashBin.github.io/Organya-JS16/
+See the demo: https://realtrashbin.github.io/organya-js16/
 
 ## About Repository
 
