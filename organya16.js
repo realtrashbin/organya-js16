@@ -117,10 +117,10 @@
                 leftBuffer[sample] = 0;
                 rightBuffer[sample] = 0;
 
-                for (let i = 0; i < 16; i++) {
+                for (let i = 0; i < 32; i++) {
                     const trackState = this.state[i];
                     if (trackState.playing) {
-                        const samples = (i < 16) ? 256 : drums[i - 16].samples;
+                        const samples = (i < 32) ? 256 : drums[i - 16].samples;
 
                         trackState.t += (trackState.frequency / this.sampleRate) * advTable[trackState.octave];
 
@@ -142,10 +142,10 @@
                         let pos2 = !this.looping && t == samples ?
                             pos
                             : ((trackState.t + advTable[trackState.octave]) & ~(advTable[trackState.octave] - 1)) % samples;
-                        const s1 = i < 16
+                        const s1 = i < 32
                             ? (waveTable[256 * this.song.instruments[i].wave + pos] / 256)
                             : (((waveTable[drums[i - 16].filePos + pos] & 0xff) - 0x80) / 256);
-                        const s2 = i < 16
+                        const s2 = i < 32
                             ? (waveTable[256 * this.song.instruments[i].wave + pos2] / 256)
                             : (((waveTable[drums[i - 16].filePos + pos2] & 0xff) - 0x80) / 256);
                         const fract = (trackState.t - pos) / advTable[trackState.octave];
@@ -183,7 +183,7 @@
         update() {
             if (this.onUpdate) this.onUpdate(this);
 
-            for (let track = 0; track < 16; track++) {
+            for (let track = 0; track < 32; track++) {
                 const note = this.song.tracks[track].find((n) => n.pos == this.playPos); // TODO: this feels inefficient
                 const trackState = this.state[track];
                 if (note) {
