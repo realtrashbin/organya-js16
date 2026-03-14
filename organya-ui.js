@@ -100,6 +100,7 @@
             if (this.scrollY > maxY) this.scrollY = maxY;
 
             const meas = this.organya ? this.organya.song.meas : [4, 4];
+            console.log(meas);
             const startMeas = this.organya ? (this.organya.playPos / (meas[0] * meas[1]) | 0) : 0;
 
             let y = -this.scrollY;
