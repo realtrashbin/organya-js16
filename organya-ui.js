@@ -166,7 +166,7 @@
                     if (noteIdx === -1) continue;
 
                     const sprHeadX = (track & 1) * 16 + 112;
-                    const sprHeadY = 48 + (track / 2 | 0) * 8;
+                    const sprHeadY = 56 + (track / 2 | 0) * 8;
 
                     let x = 64;
                     while (x < width) {
