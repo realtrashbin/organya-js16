@@ -136,7 +136,7 @@
                 const scrollX = viewPos * 16 - 64;
 
                 // draw tails
-                trackLoop: for (let track = 7; track > 0; track--) {
+                trackLoop: for (let track = 15; track > 0; track--) {
                     const trackRef = this.organya.song.tracks[track];
                     let noteIdx = Math.max(0, trackRef.findIndex((n) => n.pos >= viewPos) - 1);
                     if (noteIdx === -1) continue;
@@ -160,13 +160,17 @@
                     }
                 }
 
-                trackLoop: for (let track = 15; track > 0; track--) {
+                trackLoop: for (let track = 31; track > 0; track--) {
                     const trackRef = this.organya.song.tracks[track];
                     let noteIdx = Math.max(0, trackRef.findIndex((n) => n.pos >= viewPos) - 1);
                     if (noteIdx === -1) continue;
 
-                    const sprHeadX = (track & 1) * 16 + 112;
+                    const sprHeadX = (track & 1) * 16 + 112; //160
                     const sprHeadY = 56 + (track / 2 | 0) * 8;
+                    
+                    const sprHeadY = 56 + ((track-7) / 2 | 0) * 8;
+
+                    
 
                     let x = 64;
                     while (x < width) {
