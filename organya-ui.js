@@ -182,7 +182,7 @@
 
                         x = noteX;
                         for (let i = 0; i < note.len; i++) x += 16;
-                        if (track > 15) {
+                        if (track < 15) {
                             this.ctx.drawImage(this.noteImg, sprHeadX+48, sprHeadY2, 16, 8, noteX, noteY + 3, 16, 8);
                             continue;
                         }
