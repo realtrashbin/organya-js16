@@ -39,7 +39,7 @@
             }
 
             this.tracks = [];
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 32; i++) {
                 const track = [];
                 track.length = this.instruments[i].notes;
 
