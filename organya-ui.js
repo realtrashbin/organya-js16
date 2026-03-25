@@ -19,7 +19,7 @@
 
             this.noteImg = new Image();
             /* this.noteImg.src = "Note.png"; */
-            this.noteImg.src = "OrgUI/Junk.png";
+            this.noteImg.src = "OrgUI/Note.png";
             this.noteImg.addEventListener("load", this.onImageLoad.bind(this));
             this.pianoRoll = new Image();
             /* this.pianoRoll.src = "Music.png"; */
@@ -141,8 +141,8 @@
                     let noteIdx = Math.max(0, trackRef.findIndex((n) => n.pos >= viewPos) - 1);
                     if (noteIdx === -1) continue;
 
-                    const sprTailX = 144;
-                    const sprTailY = 24 + track * 4;
+                    const sprTailX = 32;
+                    const sprTailY = track * 4;
 
                     let x = 64;
                     while (x < width) {
@@ -165,8 +165,8 @@
                     let noteIdx = Math.max(0, trackRef.findIndex((n) => n.pos >= viewPos) - 1);
                     if (noteIdx === -1) continue;
 
-                    const sprHeadX = (track & 1) * 16 + 112; //160
-                    const sprHeadY = 56 + (track / 2 | 0) * 8;
+                    const sprHeadX = (track & 1) * 16;
+                    const sprHeadY = (track / 2 | 0) * 8;
 
                     
 
