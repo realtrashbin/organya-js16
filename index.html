@@ -84,14 +84,14 @@ Bi_N/Balrog's ThemeV2.org16`.split("\n").sort();
             })
 
             let currentOrg = null;
-            window.stopOrg = () => {
+            window.stop = () => {
                 if (currentOrg != null) {
                     currentOrg.stop();
                     currentOrg = null;
                 }
             }
 
-            window.playOrg = async () => {
+            window.play = async () => {
                 stop();
 
                 console.log("fetching song...");
