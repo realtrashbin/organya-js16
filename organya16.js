@@ -271,10 +271,10 @@
         }
     }
 
-    window.initOrganya = async () => {
+window.initOrganya = async () => {
         if (window.Organya) return;
 
-console.log("Initializing Organya...");
+        console.log("Initializing Organya...");
         const res = await fetch("WAVE100.bin");
         const buf = await res.arrayBuffer();
         const view = new DataView(buf);
@@ -329,3 +329,4 @@ console.log("Initializing Organya...");
         window.Organya = Organya;
     };
 })();
+
