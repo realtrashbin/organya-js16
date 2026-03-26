@@ -45,8 +45,8 @@
 <body>
     <div id="toolbar">
         <select id="songs"></select>
-        <button onclick="playOrg()"><img src="OrgUI/buttons/Play.png"></img></button>
-        <button onclick="stopOrg()"><img src="OrgUI/buttons/Pause.png"></img></button>
+        <button onclick="play()"><img src="OrgUI/buttons/Play.png"></img></button>
+        <button onclick="stop()"><img src="OrgUI/buttons/Pause.png"></img></button>
     </div>
     <div id="canvas-container">
         <canvas id="org-canvas"></canvas>
@@ -92,7 +92,7 @@ Bi_N/Balrog's ThemeV2.org16`.split("\n").sort();
             }
 
             window.playOrg = async () => {
-                stopOrg();
+                stop();
 
                 console.log("fetching song...");
                 const res = await fetch(songListEl.options[songListEl.selectedIndex].value);
